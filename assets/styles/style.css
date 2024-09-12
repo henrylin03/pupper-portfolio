@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --primary-colour: hsl(192, 91%, 36%);
+  --gray-colour: hsl(0, 0%, 35%);
+  --shadow: 2px 1px 4px 2px rgba(0, 0, 0, .2);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  color: var(--gray-colour);
+  line-height: 1.75rem;
+}
+
+section {
+  padding: 60px 0;
+}
+
+.inner {
+  width: clamp(950px, 75vw, 90%);
+  margin: 0 auto;
+}
+
+/* ABOUT */
+.about {
+  position: relative;
+  overflow-x: clip;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.portrait-container {
+  grid-column: 1 / 2;
+  align-self: center;
+  justify-self: end;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+}
+
+.portrait {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  width: 100%;
+  box-shadow: var(--shadow);
+  z-index: 2;
+}
+
+.name {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  z-index: 3;
+  text-align: center;
+  align-self: end;
+  padding: 8px 4px;
+  color: var(--primary-colour);
+  font-size: clamp(35px, 3vw, 3rem);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.card {
+  grid-column: 2 / 3;
+  align-self: center;
+  background-color: white;
+  box-shadow: var(--shadow);
+  padding: 48px 28px 36px 28px;
+  line-height: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.socials-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.about .socials-buttons {
+  justify-content: end;
+}
+
+.trapezium {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 100%;
+  width: 100%;
+  z-index: -99;
+  transform: scale(1.1) rotate(-15deg) translateY(-35%);
+  box-shadow: var(--shadow);
+  background-color: var(--primary-colour);
+}
+
+/* BUTTONS */
+button {
+  background-color: black;
+}
+
+.socials-buttons button {
+  width: 24px;
+  height: 24px;
+}
+
+.github-button {
+  mask-image: url("../icons/github.svg")
+}
+
+.linkedin-button {
+  mask-image: url("../icons/linkedin.svg");
+}
+
+.twitter-button {
+  mask-image: url("../icons/twitter-x.svg");
+}
+
+.external-link {
+  mask-image: url("../icons/external-link.svg");
+}
+
+/* WORK (MY WORK) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 36px;
+  margin-top: 20px;
+}
+
+.project {
+  box-shadow: var(--shadow);
+  min-height: 30em;
+}
+
+.work .text-container {
+  padding: 12px 24px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.text-container .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-container .links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.links button {
+  width: 20px;
+  height: 20px;
+}
+
+.project p {
+  font-size: .85rem;
+}
+
+.project>img {
+  width: 100%;
+}
+
+/* CONTACT ME */
+.contact-me {
+  background-color: var(--primary-colour);
+}
+
+.contact-me .inner {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+}
+
+.contact-me h2,
+.contact-me p {
+  color: white;
+}
+
+.contact-photo {
+  width: 100%;
+}
+
+.contact-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-details {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-me figure {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: white;
+}
+
+.phone-icon {
+  mask-image: url("../icons/phone.svg");
+}
+
+.email-icon {
+  mask-image: url("../icons/mail.svg");
+}

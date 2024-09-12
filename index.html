@@ -1,17 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="normalise.css">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pupper | Portfolio</title>
+  <link rel="stylesheet" href="assets/styles/normalise.css">
+  <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 
 <body>
+  <section class="about">
+    <div class="grid inner">
+      <figure class="portrait-container">
+        <img src="./assets/images/black-labrador-retriever-puppy - cropped.jpg" alt="Portrait image" class="portrait" />
+        <h1 class="name">Pupper</h1>
+      </figure>
 
-  <script src="script.js"></script>
+      <article class="card">
+        <h2>About me</h2>
+        <p>
+          Hi there! I'm Pupper, your friendly neighborhood pup with a
+          passion for coding and cuddles. From my first wobbly steps to
+          mastering the art of tail-chasing and keyboard-tapping, I've always
+          been curious and eager to learn. My coding journey is a tale of
+          chewed-up cables and wagging tails, all mixed with a whole lot of
+          puppy love and treats. Whether I'm designing a pawsitively purrfect
+          app or sniffing out bugs in my code, I'm here to sprinkle some joy
+          and creativity into the tech world. Woof around and stay tuned for
+          my latest playful projects!
+        </p>
+        <div class="socials-buttons">
+          <button type="button" class="github-button"></button>
+          <button type="button" class="linkedin-button"></button>
+          <button type="button" class="twitter-button"></button>
+        </div>
+      </article>
+    </div>
+    <div class="trapezium"></div>
+  </section>
+
+  <section class="work">
+    <div class="inner">
+      <h2>My work</h2>
+      <div class="projects-grid">
+        <article class="project">
+          <img src="assets/images/labrador-puppies.jpg" alt="Black labrador puppies on a white couch" />
+          <div class="text-container">
+            <div class="top">
+              <h3 class="project-name">Project name</h3>
+              <div class="links">
+                <button type="button" class="github-button"></button>
+                <button type="button" class="external-link"></button>
+              </div>
+            </div>
+            <p class="project-description">
+              Short description of the project. Just a couple of sentences will
+              do.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-me">
+    <div class="inner">
+      <div class="text-container">
+        <h2>Contact me</h2>
+        <p>
+          Please get in touch if you think our work could be mutually beneficial!
+        </p>
+        <p>1234 Doggers Road,<br />Puppytown, Australia 2000</p>
+        <div class="contact-details-container">
+          <div class="contact-details phone">
+            <figure class="phone-icon"></figure>
+            <p>555-555-5555</p>
+          </div>
+          <div class="contact-details email">
+            <figure class="email-icon"></figure>
+            <p>pupper.pupper@doggers.woof</p>
+          </div>
+        </div>
+        <div class="socials-buttons">
+          <button type="button" class="github-button"></button>
+          <button type="button" class="linkedin-button"></button>
+          <button type="button" class="twitter-button"></button>
+        </div>
+      </div>
+
+      <img src="/assets/images/sad-dog-on-phone.jpg" alt="A black labrador on the phone" class="contact-photo">
+    </div>
+  </section>
+
+  <script src="./script.js"></script>
 </body>
 
 </html>
