@@ -11,13 +11,14 @@
 
 <body>
   <section class="about">
-    <div class="grid inner">
+    <div class="inner">
       <figure class="portrait-container">
         <img src="./assets/images/black-labrador-retriever-puppy - cropped.jpg" alt="Portrait image" class="portrait" />
         <h1 class="name">Pupper</h1>
       </figure>
 
       <article class="card">
+        <div class="corner"></div>
         <h2>About me</h2>
         <p>
           Hi there! I'm Pupper, your friendly neighborhood pup with a
@@ -37,6 +38,7 @@
         </div>
       </article>
     </div>
+
     <div class="trapezium"></div>
   </section>
 
@@ -89,7 +91,11 @@
         </div>
       </div>
 
-      <img src="/assets/images/sad-dog-on-phone.jpg" alt="A black labrador on the phone" class="contact-photo">
+      <picture>
+        <source media="(min-width: 950px)" srcset="assets/images/sad-dog-on-phone.jpg">
+        <source media="(max-width: 949px)" srcset="assets/images/sad-dog-on-phone-close-portrait.jpg">
+        <img src="/assets/images/sad-dog-on-phone.jpg" alt="A black labrador on the phone" class="contact-photo">
+      </picture>
     </div>
   </section>
 
