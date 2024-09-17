@@ -85,9 +85,9 @@ section {
   text-align: center;
   align-self: end;
   padding: 8px 4px;
-  color: var(--primary-colour);
+  color: white;
   font-size: 4rem;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 .card {
@@ -242,10 +242,13 @@ button {
   gap: 12px;
 }
 
-.contact-me figure {
+.contact-icon {
   height: 1.5rem;
-  width: 1.5rem;
+  min-width: 1.5rem;
   background-color: white;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
 }
 
 .phone-icon {
@@ -286,7 +289,6 @@ button {
   }
 
   .name {
-    color: white;
     position: absolute;
     top: 0;
     left: min(105%, 50vw);
@@ -329,9 +331,138 @@ button {
   /* CONTACT */
   .contact-me .inner {
     grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
   }
 
   .contact-photo {
     object-position: center;
   }
+}
+
+/* MOBILE */
+@media (max-width: 599px) {
+  h2 {
+    text-align: center;
+  }
+
+  p {
+    line-height: 1.5rem;
+  }
+
+  /* ABOUT ME */
+  .about {
+    padding: 0;
+  }
+
+  .about * {
+    transform: none;
+  }
+
+  .about>.inner * {
+    position: static;
+  }
+
+  .portrait-container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .portrait {
+    width: 90%;
+
+    /* grid placement */
+    grid-column: 1 / 2;
+    place-self: center;
+  }
+
+  .name {
+    font-size: min(3.3rem, 15vmin);
+  }
+
+  .card {
+    box-shadow: none;
+    background-color: transparent;
+    padding: 36px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3vmin;
+  }
+
+  .card h2,
+  .card p {
+    width: 85vw;
+    margin: 0 auto;
+  }
+
+  .card>.corner {
+    display: none;
+  }
+
+  .about .socials-buttons {
+    /* unhide */
+    display: flex;
+    justify-content: center;
+  }
+
+  .trapezium {
+    transform: scale(2.5) rotate(-30deg) translateY(-60%);
+  }
+
+  /* MY WORK */
+  .work {
+    padding-bottom: 12rem;
+  }
+
+  .projects-grid {
+    gap: 60px;
+  }
+
+  .project-description {
+    line-height: 1.1rem;
+  }
+
+  /* CONTACT */
+  .contact-me {
+    padding-top: 24px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .contact-me .inner {
+    width: 100vw;
+    grid-template-columns: 1fr;
+    gap: 84px;
+  }
+
+  .contact-me .text-container {
+    width: 85vw;
+    margin: 0 auto;
+  }
+
+  .contact-me p:not(.subtext) {
+    font-size: .85rem;
+    letter-spacing: .05rem;
+    line-height: 1.05rem;
+  }
+
+  .contact-me .subtext {
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+
+  .contact-me .socials-buttons {
+    margin: 0 auto;
+    gap: 36px;
+  }
+
+  .contact-me .socials-buttons button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .contact-photo {
+    display: block;
+  }
+
 }
